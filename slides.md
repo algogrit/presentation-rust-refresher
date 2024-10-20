@@ -3,7 +3,6 @@ layout: true
 .signature[@algogrit]
 
 ---
-
 class: center, middle
 
 # Rust Refresher
@@ -22,6 +21,7 @@ Gaurav Agarwal
 - Scope & Lifetimes (*more later*)
 
 ---
+class: center, middle
 
 Scalar & Compound Types
 
@@ -79,6 +79,16 @@ The Block Started by Symbol (BSS) section contains the uninitialized variables.
 class: center, middle
 
 ### Stack vs Heap
+
+---
+class: center, middle
+
+> Rust is very much like C++, it will put everything on the stack by default. To store things on the heap you have to do so explicitly (usually by wrapping them in smart pointers like `Box` or `Rc`).
+
+---
+class: center, middle
+
+> Note however that (also as in C++) some types may "implicitly" perform heap allocations e.g. `String` or `Vec` are on-stack structs but one of the members is a pointer to a heap-allocated buffer.
 
 ---
 class: center, middle
